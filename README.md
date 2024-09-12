@@ -9,7 +9,7 @@ log-format '{"accept_date":"%ms","backend_name":"%b","backend_queue":"%bq","back
 ## 2.2 Build and run the Docker containers:
 #### docker-compose up --build
 
-3. Check mysql data
+# 3. Check mysql data
 #### docker ps 
 #### docker-compose exec -it mysql bash
 #### mysql -u root -p
