@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: haproxy_logs
+    ports:
+      - "3306:3306"
+
+  app:
+    build: .
+    depends_on:
+      - mysql
+    volumes:
+      - .:/usr/src/app
+    command: python parse_haproxy_logs.py
