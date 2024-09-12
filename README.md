@@ -11,7 +11,7 @@ log-format '{"accept_date":"%ms","backend_name":"%b","backend_queue":"%bq","back
 
 3. Check mysql data
 #### docker ps 
-# docker-compose exec -it mysql bash
+#### docker-compose exec -it mysql bash
 #### mysql -u root -p
 #### mysql> show databases;
 #### mysql> use haproxy_logs;
